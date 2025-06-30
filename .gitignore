@@ -1,0 +1,91 @@
+#####################
+# Archivos de compilación y temporales
+#####################
+bin/
+obj/
+out/
+*.dll
+*.exe
+*.app
+*.pdb
+*.cache
+*.log
+*.vspscc
+*.vssscc
+*.dbmdl
+*.bak
+*.sql
+
+#####################
+# Configuración local de usuario
+#####################
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+#####################
+# Configuración de IDEs y editores
+#####################
+.vs/
+.vscode/
+.idea/
+
+#####################
+# Dependencias
+#####################
+packages/
+*.nupkg
+*.snupkg
+*.nuspec
+
+#####################
+# Archivos de test y cobertura
+#####################
+TestResults/
+*.coverage
+*.coveragexml
+*.testsettings
+*.vsmdi
+*.tscn
+*.tres
+*.res
+*.resS
+*.testlog
+
+#####################
+# Informes de cobertura de herramientas como coverlet, dotCover, etc.
+#####################
+coverage/
+coverage.cobertura.xml
+lcov.info
+
+#####################
+# Archivos generados por publish
+#####################
+*.publish/
+*.deploy.cmd
+*.deploy-readme.txt
+*.pubxml
+*.pubxml.user
+
+#####################
+# Archivos de entorno y secretos
+#####################
+*.env
+*.env.*
+secrets.json
+appsettings.Development.json
+appsettings.Local.json
+
+#####################
+# Sistema operativo
+#####################
+.DS_Store
+Thumbs.db
+
+#####################
+# Otros
+#####################
+_ReSharper*/
+*.DotSettings.user
