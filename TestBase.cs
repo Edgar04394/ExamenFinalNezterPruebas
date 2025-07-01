@@ -7,8 +7,8 @@ namespace NezterBackend.Tests
 {
     public abstract class TestBase
     {
-        protected IConfiguration Configuration { get; private set; }
-        protected IServiceProvider ServiceProvider { get; private set; }
+        protected IConfiguration Configuration { get; private set; } = null!;
+        protected IServiceProvider ServiceProvider { get; private set; } = null!;
 
         protected TestBase()
         {

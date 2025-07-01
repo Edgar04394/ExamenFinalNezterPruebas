@@ -2,6 +2,7 @@ using Xunit;
 using FluentAssertions;
 using Moq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using ApiExamen.Controllers;
 using ApiExamen.Services;
 using ApiExamen.Models;
@@ -12,12 +13,14 @@ namespace NezterBackend.Tests.Controllers
     public class AuthControllerTests : TestBase
     {
         private readonly Mock<IAuthService> _mockAuthService;
+        private readonly Mock<IConfiguration> _mockConfiguration;
         private readonly AuthController _authController;
 
         public AuthControllerTests()
         {
             _mockAuthService = new Mock<IAuthService>();
-            _authController = new AuthController(_mockAuthService.Object);
+            _mockConfiguration = new Mock<IConfiguration>();
+            _authController = new AuthController(_mockAuthService.Object, _mockConfiguration.Object);
         }
 
         [Fact]

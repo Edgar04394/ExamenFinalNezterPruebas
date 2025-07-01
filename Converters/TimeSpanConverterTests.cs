@@ -180,7 +180,7 @@ namespace NezterBackend.Tests.Converters
         public void CanConvert_ConTipoNull_DeberiaRetornarFalse()
         {
             // Act
-            var result = _converter.CanConvert(null);
+            var result = _converter.CanConvert(null!);
 
             // Assert
             result.Should().BeFalse();

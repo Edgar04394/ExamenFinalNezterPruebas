@@ -81,7 +81,7 @@ namespace NezterBackend.Tests.Services
         {
             // Arrange
             var loginRequest = new LoginRequest { Usuario = null, Contrasena = "algo" };
-            _mockUsuarioRepository.Setup(x => x.ObtenerUsuarioPorCredenciales(null, "algo")).ReturnsAsync((Usuario?)null);
+            _mockUsuarioRepository.Setup(x => x.ObtenerUsuarioPorCredenciales("", "algo")).ReturnsAsync((Usuario?)null);
 
             // Act
             var token = await _authService.Login(loginRequest);
@@ -95,7 +95,7 @@ namespace NezterBackend.Tests.Services
         {
             // Arrange
             var loginRequest = new LoginRequest { Usuario = "alguien", Contrasena = null };
-            _mockUsuarioRepository.Setup(x => x.ObtenerUsuarioPorCredenciales("alguien", null)).ReturnsAsync((Usuario?)null);
+            _mockUsuarioRepository.Setup(x => x.ObtenerUsuarioPorCredenciales("alguien", "")).ReturnsAsync((Usuario?)null);
 
             // Act
             var token = await _authService.Login(loginRequest);

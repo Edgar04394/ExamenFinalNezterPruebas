@@ -10,8 +10,6 @@ namespace NezterBackend.Tests.Services
 {
     public class EmpleadoServiceTests : TestBase
     {
-        private readonly Mock<IConfiguration> _mockConfiguration;
-        private readonly Mock<IEmpleadoService> _mockEmpleadoService;
         private readonly EmpleadoService _empleadoService;
 
         public EmpleadoServiceTests()
@@ -25,12 +23,6 @@ namespace NezterBackend.Tests.Services
                 .Build();
             
             _empleadoService = new EmpleadoService(configuration);
-        }
-
-        private void SetupMockConfiguration()
-        {
-            _mockConfiguration.Setup(x => x.GetConnectionString("DefaultConnection"))
-                .Returns("Server=EDGARLEAL060403;Database=ProyectoExamen;Trusted_Connection=True;Encrypt=True;TrustServerCertificate=True");
         }
 
         [Fact]
